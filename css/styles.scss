@@ -1,0 +1,83 @@
+$mybackgroundcolor: violet;
+$myheadercolor: rgb(18, 161, 54);
+$light-gray: gray;
+
+@mixin my-margin($pd-up-dn, $pd-lf-rt) {
+    margin:0px auto;
+    padding: $pd-up-dn, $pd-lf-rt;
+}
+
+body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.row-header {
+    @include my-margin(0, 0);
+}
+
+.row-content{
+    @include my-margin(50px, 0);
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+
+.footer {
+    background-color: $mybackgroundcolor;
+    @include my-margin(20, 0)
+}
+
+.jumbotron{
+    @include my-margin(70, 30);
+    background-color: #9575cd;
+    color: floralwhite;
+}
+
+.address {
+    size: 80%;
+    color: black;
+    margin: 0px;
+}
+
+.navbar-dark {
+    background-color: $myheadercolor;
+}
+
+.tab-content{
+    border-left: 1px solid $light-gray;
+    border-right: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    padding: 10px;
+}
+
+.carousel {
+    background-color: #4e2da8;
+}
+
+.carousel-item {
+    height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+#carousel-button {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.modal-header {
+    background-color: $myheadercolor;
+}
+
+.modal-body {
+    background-color: $mybackgroundcolor;
+}
+
+
+
